@@ -15,7 +15,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port Render uses
-EXPOSE 10000
+EXPOSE 3000
 
 # Start the application
 CMD ["npm", "start"]
