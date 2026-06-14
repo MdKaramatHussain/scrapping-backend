@@ -4,7 +4,9 @@ import logger from './config/logger';
 import browserManager from './services/browser/BrowserManager';
 
 const PORT = config.port;
+console.log("Node Version:", process.version);
 
+// rest of your code
 /**
  * Start Server
  */
@@ -16,6 +18,7 @@ async function startServer(): Promise<void> {
 
     // Start HTTP server
     const server = app.listen(PORT, () => {
+      console.log("Node Version:", process.version);
       logger.info(`Server is running on port ${PORT}`);
       logger.info(`Environment: ${config.node_env}`);
       logger.info(`Browser pool size: ${config.browser.pool_size}`);
