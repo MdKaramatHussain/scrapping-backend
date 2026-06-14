@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A production-grade Node.js + TypeScript backend service for scraping ecommerce product pages. Designed to be deployed independently and optimized for platforms like Render.",
   "main": "jest.config.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.ts",
