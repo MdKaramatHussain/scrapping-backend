@@ -4,7 +4,7 @@ dotenv.config();
 
 export const config = {
   node_env: process.env.NODE_ENV || 'production',
-  port: parseInt(process.env.PORT || '3001', 10),
+  port: parseInt(process.env.PORT || '3000', 10),
   log_level: process.env.LOG_LEVEL || 'info',
 
   browser: {
