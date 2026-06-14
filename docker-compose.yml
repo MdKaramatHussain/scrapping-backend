@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      LOG_LEVEL: info
+      BROWSER_POOL_SIZE: 3
+      BROWSER_TIMEOUT: 30000
+      PAGE_LOAD_TIMEOUT: 15000
+      PLAYWRIGHT_HEADLESS: 'true'
+      RATE_LIMIT_WINDOW_MS: 900000
+      RATE_LIMIT_MAX_REQUESTS: 100
+      API_KEY: your-secret-api-key-here
+      ENABLE_METRICS: 'true'
+      CORS_ORIGIN: 'http://localhost:3000'
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  logs:

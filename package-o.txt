@@ -1,0 +1,57 @@
+{
+  "name": "flipkart-clone-backend-scraper",
+  "version": "1.0.0",
+  "description": "Production-grade ecommerce product scraper backend",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "ts-node src/app.ts",
+    "build": "tsc",
+    "start": "node src/app.js",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "test": "jest",
+    "docker:build": "docker build -t flipkart-scraper:latest .",
+    "docker:run": "docker run -p 3000:3000 flipkart-scraper:latest"
+  },
+  "keywords": [
+    "scraper",
+    "ecommerce",
+    "flipkart",
+    "amazon",
+    "playwright"
+  ],
+  "author": "karamat hussain",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.22.2",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^7.2.0",
+    "playwright": "^1.40.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

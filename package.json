@@ -1,0 +1,31 @@
+{
+  "name": "flipkart-clone-backend",
+  "version": "1.0.0",
+  "description": "A production-grade Node.js + TypeScript backend service for scraping ecommerce product pages. Designed to be deployed independently and optimized for platforms like Render.",
+  "main": "jest.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.ts"
+  },
+  "keywords": [],
+  "author": "karamat hussain",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.17.0",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "nodemon": "^3.1.14",
+    "playwright": "^1.60.0",
+    "uuid": "^14.0.0",
+    "winston": "^3.19.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6"
+  }
+}
