@@ -4,7 +4,6 @@ import logger from './config/logger';
 import browserManager from './services/browser/BrowserManager';
 
 const PORT = config.port;
-console.log("Node Version:", process.version);
 
 // rest of your code
 /**
